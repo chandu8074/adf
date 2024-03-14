@@ -1,0 +1,35 @@
+{
+	"name": "processed_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "raw_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "processed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ItemId",
+				"type": "String"
+			},
+			{
+				"name": "itemName",
+				"type": "String"
+			},
+			{
+				"name": "vartname",
+				"type": "String"
+			}
+		]
+	}
+}
